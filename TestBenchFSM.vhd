@@ -12,7 +12,7 @@ architecture Behavioral of tbmain is
 signal clk,reset,seq,det_vld : std_logic := '0';
    constant clk_period : time := 10 ns;
 
-BEGIN
+begin
 
     -- Instantiate the Unit Under Test (UUT)
    uut: entity work.fsm PORT MAP (
@@ -22,7 +22,7 @@ BEGIN
           det_vld => det_vld
         );
 
-   -- Clock process definitions
+   
    clk_process :process
    begin
         clk <= '0';

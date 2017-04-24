@@ -42,7 +42,7 @@ begin
             when C =>  --when the current state is C.
                 det_vld <= '0';
                 if ( seq = '0' ) then
-                    state <= F;
+                    state <= G;
                 else    
                     state <= D;
                     
@@ -51,7 +51,7 @@ begin
             when D =>     --when the current state is D.
                 det_vld <= '0';
                 if ( seq = '0' ) then
-                    state <= C;
+                    state <= G;
                 else    
                     state <= D;
                     det_vld <= '1'; --means it found the sequence 1111
@@ -71,7 +71,7 @@ begin
             when F =>   --when the current state is F.
                 det_vld <= '0';
                 if ( seq = '0' ) then
-                    state <= F;
+                    state <= A;
                
                 else    
                     state <= B;
